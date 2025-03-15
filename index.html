@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunchu Siri - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f3f4f6; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* Navigation Bar */
+        nav { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, #69afb4, #6fb5ba); padding: 20px 30px; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        nav h1 { color: white; font-size: 2rem; font-weight: 600; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin: 0 20px; }
+        .nav-links a { text-decoration: none; color: white; font-size: 1.2rem; transition: 0.3s; }
+        .nav-links a:hover { color: #0576ef; }
+
+        /* Hero Section */
+        #hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(90deg, rgba(253, 249, 249, 0.7), rgba(255, 255, 255, 0.4)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover; position: relative; }
+        .hero-content { max-width: 800px; margin: auto; padding: 60px; background: rgba(149, 185, 195, 0.6); border-radius: 10px; }
+        .hero-content h2 { font-size: 3.5rem; margin-bottom: 20px; color: #3b8297; text-shadow: 2px 2px 10px #ffffff; }
+        .hero-content p { font-size: 1.8rem; margin-bottom: 20px; color: #fff; }
+        .cta-btn { background: #03bef2; padding: 15px 30px; font-size: 1.3rem; color: #ffffff; border-radius: 5px; transition: 0.3s; cursor: pointer; display: inline-block; text-decoration: none; }
+        .cta-btn:hover { background: #2d60fb; }
+
+        /* Section Styles */
+        section { padding: 120px 20px; text-align: center; }
+        .container { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        h2 { font-size: 2.5rem; color: #38748e; margin-top: 20px; font-weight: 600; text-align: center; width: 100%; }
+        p { font-size: 1.2rem; line-height: 1.6; color: #666; margin-top: 20px; }
+        .image { max-width: 300px; flex: 1; }
+        .desc { max-width: 500px; flex: 1; }
+        .resume { padding-left: 2px; margin-left: 5px; margin-bottom: 2px; }
+        button { background: #03bef2; font-size: 1.3rem; color: #ffffff; border-radius: 2px; transition: 0.3s; cursor: pointer; display: inline-flex; text-decoration: none; border-color: #ffff; }
+        button:hover { background: #2d60fb; }
+
+        /* Skills Section (Side-by-Side Layout) */
+        .skills { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+        .skills div { background: #f7f7f7; padding: 20px; border-radius: 8px; width: 30%; min-width: 280px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
+        .skills div h3 { font-size: 1.5rem; margin-bottom: 10px; color: #013952; }
+        .skills div ul { list-style-type: none; padding: 0; }
+        .skills div ul li { font-size: 1.1rem; margin: 5px 0; color: #666; }
+        
+        /* Projects Section */
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+    width: 75%;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.projects div {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%; 
+    min-width: 280px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: small;
+    font-weight: 100;
+    text-align: center;
+}
+
+.projects img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+        /* footer*/
+        footer {
+            background-color: #274869;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Animations */
+        .animated { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+        .visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Chunchu Siri</h1>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Hi, I'm Chunchu Siri</h2>
+            <p>A passionate B.Tech student in Computer Science</p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container animated">
+        <h2>About Me</h2>
+        <div class="image">
+            <img src="https://github.com/Sirichunchu23/photos/blob/main/idcard.jpg?raw=true" style="width:100%;border-radius: 50%;">
+        </div>
+        <div class="desc">
+            <p>I am a Computer Science student with a deep passion for web development, machine learning, and software engineering. My goal is to build scalable applications, problem-solving, different types of web designs, and contribute to innovative projects that make a difference.</p>
+            <div class="resume">
+                <button><a href="https://drive.google.com/file/d/10It3gixem-K26D6k_YcfEAVt02DKIGZv/view?usp=drivesdk" style="text-decoration: none;color: #fff; border-style:hidden;">Resume</a></button>
+            </div>
+        </div>   
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container animated">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>Languages <button onclick="toggleDetails('languages')" style="border: none;background-color: white; color: #333;"><i id="arrow-icon-languages" class="fa fa-chevron-down"></i></button></h3>
+                <div id="languages" style="display: none;">
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
+                        <li>Oracle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h3>Product Design <button onclick="toggleDetails('product-design')" style="border: none;background-color: white;color: #333;"><i id="arrow-icon-product-design" class="fa fa-chevron-down"></i></button></h3>
+                <div id="product-design" style="display: none;">
+                    <ul>
+                        <li>UX/UI</li>
+                        <li>Excel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h3>Soft Skills <button onclick="toggleDetails('soft-skills')" style="border: none;background-color: white;color: #333;"><i id="arrow-icon-soft-skills" class="fa fa-chevron-down"></i></button></h3>
+                <div id="soft-skills" style="display: none;">
+                    <ul>
+                        <li>Communication Skills</li>
+                        <li>Teamwork and Collaboration</li>
+                        <li>Problem-Solving</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container animated">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175942.png?raw=true" alt="College Information System">
+                <p>The College Management System is a web application designed to streamline student
+                    access to essential information.The application was developed using
+                    HTML, CSS, and JavaScript basics, representing a complete front-end development.</p><br>
+                    <button><a href="https://sirichunchu23.github.io/HCI_05_College_Information_System/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>   
+            </div>
+            <div>
+                <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175656.png?raw=true" alt="Portfolio">
+                <p>This portfolio design is a modern and responsive personal website. It serves as an online representation of the user's skills, projects, and contact information using HTML, CSS and some basics of JavaScript.</p><br>
+                <button><a href="#" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container animated">
+        <h2>Contact</h2>
+        <div class="contact-numbers" id="contact-numbers">
+            <ul style="list-style-type: none;">
+                <li>📞 <a href="tel:+919550544380" style="text-decoration: none;color: #333;">+91 9550544380</a></li>
+                <li>✉ <a href="mailto:sirichunchu123@gmail.com" style="text-decoration: none;color: #333;">sirichunchu123@gmail.com</a></li>
+                <li>📍 Ambedkar Nagar, Jangaon</li>
+                <li>
+                    <a href="https://wa.me/qr/ZHZNX5EVAYD7K1" style="text-decoration: none;"><img src="https://github.com/Sirichunchu23/photos/blob/main/whatsapp.jpg?raw=true" style="width:5%;height: 5%;"></a>
+                    <a href="https://www.linkedin.com/in/siri-chunchu-246518292/" style="text-decoration: none;"><img src="https://github.com/Sirichunchu23/photos/blob/main/linkedin.jpg?raw=true" style="width: 5%;height: 5%;padding-left:10px;padding-bottom: 4px;"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: white;">&copy; 2025 Chunchu Siri. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+       
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".animated");
+            const options = { root: null, threshold: 0.2 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            sections.forEach(section => observer.observe(section));
+        });
+
+        function toggleDetails(skillId) {
+    const details = document.getElementById(skillId);
+    const icon = document.getElementById('arrow-icon-' + skillId);
+
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block"; 
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+    } else {
+        details.style.display = "none"; 
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+    }
+}
+
+    </script>
+</body>
+</html>
