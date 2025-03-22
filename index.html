@@ -43,52 +43,154 @@
         .skills div h3 { font-size: 1.5rem; margin-bottom: 10px; color: #013952; }
         .skills div ul { list-style-type: none; padding: 0; }
         .skills div ul li { font-size: 1.1rem; margin: 5px 0; color: #666; }
-        
+
         /* Projects Section */
-.projects {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    text-align: center;
-    width: 75%;
-    margin-left: auto; 
-    margin-right: auto; 
-}
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            text-align: center;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.projects div {
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
-    width: 48%; 
-    min-width: 280px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: small;
-    font-weight: 100;
-    text-align: center;
-}
+        .projects div {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            width: 48%;
+            min-width: 280px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: small;
+            font-weight: 100;
+            text-align: center;
+        }
 
-.projects img {
-    max-width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .projects img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.projects img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-}
+        .projects img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+        }
 
-        /* footer*/
+        /* Footer */
         footer {
             background-color: #274869;
             text-align: center;
             padding: 20px;
         }
+
         /* Animations */
         .animated { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
         .visible { opacity: 1; transform: translateY(0); }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+            nav h1 {
+                font-size: 1.8rem;
+            }
+            .nav-links {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+
+            #hero {
+                height: 80vh;
+            }
+
+            .hero-content h2 {
+                font-size: 2.8rem;
+            }
+
+            .cta-btn {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills div {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .projects {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .projects div {
+                width: 80%;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav h1 {
+                font-size: 1.5rem;
+            }
+            .nav-links a {
+                font-size: 1rem;
+            }
+
+            #hero {
+                height: 70vh;
+            }
+
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-btn {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills div {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .projects div {
+                width: 100%;
+            }
+
+            footer {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -180,7 +282,7 @@
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175656.png?raw=true" alt="Portfolio">
                 <p>This portfolio design is a modern and responsive personal website. It serves as an online representation of the user's skills, projects, and contact information using HTML, CSS and some basics of JavaScript.</p><br>
-                <button><a href="https://sirichunchu23.github.io/Portfolio/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
+                <button><a href="#" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
             </div>
         </div>
     </section>
@@ -207,7 +309,6 @@
     </footer>
 
     <script>
-       
         document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll(".animated");
             const options = { root: null, threshold: 0.2 };
@@ -236,7 +337,6 @@
         icon.classList.add('fa-chevron-down');
     }
 }
-
     </script>
 </body>
 </html>
