@@ -7,14 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+        /* Root and colors */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body {
-            background-color: #121212;
+            background: #0d1117;
             color: #e0e0e0;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -35,19 +31,13 @@
         .background-animation .circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(30, 144, 255, 0.1);
-            animation: float 20s linear infinite;
+            background: rgba(100, 149, 237, 0.05);
+            animation: float 30s linear infinite;
         }
         @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0) scale(1);
-            }
-            50% {
-                transform: translateY(-100px) translateX(50px) scale(1.2);
-            }
-            100% {
-                transform: translateY(0) translateX(0) scale(1);
-            }
+            0% { transform: translateY(0) translateX(0) scale(1); }
+            50% { transform: translateY(-50px) translateX(50px) scale(1.2); }
+            100% { transform: translateY(0) translateX(0) scale(1); }
         }
 
         /* Navigation Bar */
@@ -55,7 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, #1f1f1f, #333333);
+            background: linear-gradient(90deg, #161b22, #0d1117);
             padding: 20px 30px;
             position: fixed;
             width: 100%;
@@ -64,7 +54,7 @@
             backdrop-filter: blur(10px);
         }
         nav h1 {
-            color: white;
+            color: #58a6ff;
             font-size: 2rem;
             font-weight: 600;
         }
@@ -77,12 +67,12 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: #cccccc;
+            color: #c9d1d9;
             font-size: 1.2rem;
             transition: 0.3s;
         }
         .nav-links a:hover {
-            color: #1e90ff;
+            color: #58a6ff;
         }
 
         /* Hero Section */
@@ -92,47 +82,47 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(90deg, rgba(20, 20, 20, 0.7), rgba(30, 30, 30, 0.5)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+            background: linear-gradient(90deg, rgba(13,17,23,0.8), rgba(22,27,34,0.8)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
             position: relative;
+            z-index: 1;
         }
         .hero-content {
             max-width: 800px;
             margin: auto;
             padding: 60px;
-            background: rgba(40, 40, 40, 0.7);
+            background: rgba(25, 32, 44, 0.8);
             border-radius: 10px;
         }
         .hero-content h2 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #ffffff;
-            text-shadow: 2px 2px 10px #000000;
+            color: #58a6ff;
+            text-shadow: 2px 2px 10px #000;
         }
         .hero-content p {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #cccccc;
+            color: #c9d1d9;
         }
         .cta-btn {
-            background: #1e90ff;
+            background: #238636;
             padding: 15px 30px;
             font-size: 1.3rem;
-            color: #ffffff;
+            color: #fff;
             border-radius: 5px;
             transition: 0.3s;
-            cursor: pointer;
-            display: inline-block;
             text-decoration: none;
         }
         .cta-btn:hover {
-            background: #0077cc;
+            background: #2ea043;
         }
 
         /* Section Styles */
         section {
             padding: 120px 20px;
             text-align: center;
-            background-color: #181818;
+            position: relative;
+            z-index: 1;
         }
         .container {
             display: flex;
@@ -143,7 +133,7 @@
         }
         h2 {
             font-size: 2.5rem;
-            color: #1e90ff;
+            color: #58a6ff;
             margin-top: 20px;
             font-weight: 600;
             text-align: center;
@@ -152,7 +142,7 @@
         p {
             font-size: 1.2rem;
             line-height: 1.6;
-            color: #cccccc;
+            color: #c9d1d9;
             margin-top: 20px;
         }
         .image {
@@ -163,24 +153,20 @@
             max-width: 500px;
             flex: 1;
         }
-        .resume {
-            padding-left: 2px;
-            margin-left: 5px;
-            margin-bottom: 2px;
-        }
-        button {
-            background: #1e90ff;
+        .resume button {
+            background: #238636;
             font-size: 1.3rem;
-            color: #ffffff;
+            color: #fff;
             border-radius: 2px;
             transition: 0.3s;
             cursor: pointer;
             display: inline-flex;
             text-decoration: none;
-            border-color: #fff;
+            border: none;
+            padding: 10px 20px;
         }
-        button:hover {
-            background: #0077cc;
+        .resume button:hover {
+            background: #2ea043;
         }
 
         /* Skills Section */
@@ -192,18 +178,17 @@
             margin-top: 20px;
         }
         .skills div {
-            background: #1e1e1e;
+            background: #161b22;
             padding: 20px;
             border-radius: 8px;
             width: 30%;
             min-width: 280px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-            color: #e0e0e0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
         .skills div h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: #1e90ff;
+            color: #58a6ff;
         }
         .skills div ul {
             list-style-type: none;
@@ -212,7 +197,7 @@
         .skills div ul li {
             font-size: 1.1rem;
             margin: 5px 0;
-            color: #cccccc;
+            color: #c9d1d9;
         }
 
         /* Projects Section */
@@ -228,53 +213,49 @@
             margin-right: auto;
         }
         .projects div {
-            background: #1e1e1e;
+            background: #161b22;
             padding: 20px;
             border-radius: 8px;
             width: 48%;
             min-width: 280px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             font-size: small;
             font-weight: 100;
-            text-align: center;
-            color: #e0e0e0;
         }
         .projects img {
             max-width: 100%;
             border-radius: 8px;
-            border: 2px solid #444;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .projects img:hover {
             transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Contact Section */
         .contact-numbers ul {
-            list-style-type: none;
+            list-style: none;
+            padding: 0;
         }
-        .contact-numbers ul li {
+        .contact-numbers li {
             margin: 10px 0;
-            color: #cccccc;
+            font-size: 1.2rem;
         }
-        .contact-numbers ul li a {
+        .contact-numbers a {
             text-decoration: none;
-            color: #e0e0e0;
+            color: #c9d1d9;
             transition: 0.3s;
         }
-        .contact-numbers ul li a:hover {
-            color: #1e90ff;
+        .contact-numbers a:hover {
+            color: #58a6ff;
         }
 
         /* Footer */
         footer {
-            background-color: #222222;
+            background-color: #161b22;
             text-align: center;
             padding: 20px;
-        }
-        footer p {
-            color: #cccccc;
+            color: #c9d1d9;
         }
 
         /* Animations */
@@ -288,15 +269,12 @@
             transform: translateY(0);
         }
 
-        /* Responsive Media Queries */
+        /* Media Queries */
         @media screen and (max-width: 768px) {
             nav {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 15px 20px;
-            }
-            nav h1 {
-                font-size: 1.8rem;
             }
             .nav-links {
                 width: 100%;
@@ -304,39 +282,13 @@
                 justify-content: space-between;
                 margin-top: 10px;
             }
-            .nav-links li {
-                margin: 0 10px;
-            }
-            #hero {
-                height: 80vh;
-            }
-            .hero-content h2 {
-                font-size: 2.8rem;
-            }
-            .cta-btn {
-                font-size: 1.1rem;
-            }
-            .container {
+            .skills, .projects {
                 flex-direction: column;
                 align-items: center;
             }
-            .skills {
-                flex-direction: column;
-                align-items: center;
-            }
-            .skills div {
+            .skills div, .projects div {
                 width: 80%;
                 margin-bottom: 20px;
-            }
-            .projects {
-                width: 100%;
-                justify-content: center;
-            }
-            .projects div {
-                width: 80%;
-            }
-            footer {
-                padding: 15px;
             }
         }
         @media screen and (max-width: 480px) {
@@ -346,45 +298,25 @@
             .nav-links a {
                 font-size: 1rem;
             }
-            #hero {
-                height: 70vh;
-            }
             .hero-content h2 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             .cta-btn {
-                font-size: 1.1rem;
-            }
-            .container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .skills div {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            .projects div {
-                width: 100%;
-            }
-            footer {
-                padding: 10px;
-                font-size: 0.9rem;
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Background Animation -->
     <div class="background-animation">
-        <div class="circle" style="width: 200px; height: 200px; top: 10%; left: 20%; animation-delay: 0s;"></div>
-        <div class="circle" style="width: 150px; height: 150px; top: 50%; left: 70%; animation-delay: 5s;"></div>
-        <div class="circle" style="width: 100px; height: 100px; top: 80%; left: 40%; animation-delay: 10s;"></div>
-        <div class="circle" style="width: 180px; height: 180px; top: 30%; left: 80%; animation-delay: 3s;"></div>
-        <div class="circle" style="width: 120px; height: 120px; top: 60%; left: 10%; animation-delay: 7s;"></div>
+        <div class="circle" style="width:200px; height:200px; top:10%; left:20%; animation-delay:0s;"></div>
+        <div class="circle" style="width:150px; height:150px; top:50%; left:70%; animation-delay:5s;"></div>
+        <div class="circle" style="width:100px; height:100px; top:80%; left:40%; animation-delay:10s;"></div>
+        <div class="circle" style="width:180px; height:180px; top:30%; left:80%; animation-delay:3s;"></div>
+        <div class="circle" style="width:120px; height:120px; top:60%; left:10%; animation-delay:7s;"></div>
     </div>
 
-    <!-- Navigation Bar -->
     <nav>
         <h1>Chunchu Siri</h1>
         <ul class="nav-links">
@@ -396,7 +328,6 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <h2>Hi, I'm Chunchu Siri</h2>
@@ -405,7 +336,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="container animated">
         <h2>About Me</h2>
         <div class="image">
@@ -414,12 +344,11 @@
         <div class="desc">
             <p>I’m a CSE undergraduate student with a solid background in data structures, and programming. I have completed academic projects in web development, AI, and IoT that demonstrate my ability to create useful and creative solutions. I am passionate about applying what I have learned in the classroom to real-world problems.</p>
             <div class="resume">
-                <button><a href="https://github.com/Sirichunchu23/Portfolio/blob/main/Resume%20(1).pdf" style="text-decoration: none;color: #fff; border-style:hidden;">Resume</a></button>
+                <button><a href="https://github.com/Sirichunchu23/Portfolio/blob/main/Resume%20(1).pdf" style="text-decoration: none;color: #fff;">Resume</a></button>
             </div>
-        </div>   
+        </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="container animated">
         <h2>Skills</h2>
         <div class="skills">
@@ -434,7 +363,6 @@
                     </ul>
                 </div>
             </div>
-
             <div>
                 <h3>Product Design <button onclick="toggleDetails('product-design')" style="border: none;background-color: #181818;color: #cccccc;"><i id="arrow-icon-product-design" class="fa fa-chevron-down"></i></button></h3>
                 <div id="product-design" style="display: none;">
@@ -444,7 +372,6 @@
                     </ul>
                 </div>
             </div>
-
             <div>
                 <h3>Soft Skills <button onclick="toggleDetails('soft-skills')" style="border: none;background-color: #181818;color: #cccccc;"><i id="arrow-icon-soft-skills" class="fa fa-chevron-down"></i></button></h3>
                 <div id="soft-skills" style="display: none;">
@@ -459,29 +386,27 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="container animated">
         <h2>Projects</h2>
         <div class="projects">
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175942.png?raw=true" alt="College Information System">
                 <p>The College Management System is a web application designed to streamline student access to essential information. The application was developed using HTML, CSS, and JavaScript basics, representing a complete front-end development.</p><br>
-                <button><a href="https://sirichunchu23.github.io/HCI_05_College_Information_System/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
+                <button><a href="https://sirichunchu23.github.io/HCI_05_College_Information_System/" style="text-decoration: none;color: #151414;">website</a></button>
             </div>
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175656.png?raw=true" alt="Portfolio">
                 <p>This portfolio design is a modern and responsive personal website. It serves as an online representation of the user's skills, projects, and contact information using HTML, CSS and some basics of JavaScript.</p><br>
-                <button><a href="https://sirichunchu23.github.io/Portfolio/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
+                <button><a href="https://sirichunchu23.github.io/Portfolio/" style="text-decoration: none;color: #151414;">website</a></button>
             </div>
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-08-19%20183931.png?raw=true" alt="Analysis">
                 <p>The project successfully shows that follower count can predict an influencer’s potential reach using regression, while clustering helps group influencers with similar traits. These insights can guide brands and marketers in selecting the right influencers for campaigns.</p><br>
-                <button><a href="https://sirichunchu23.github.io/Hybrid-Social-Media-Analysis/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
+                <button><a href="https://github.com/Sirichunchu23/Hybrid-Social-Media-Analysis" style="text-decoration: none;color: #151414;" >website</a></button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="container animated">
         <h2>Contact</h2>
         <div class="contact-numbers" id="contact-numbers">
@@ -497,7 +422,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Chunchu Siri. All Rights Reserved.</p>
     </footer>
@@ -531,6 +455,5 @@
             }
         }
     </script>
-
 </body>
 </html>
