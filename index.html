@@ -6,32 +6,27 @@
     <title>Chunchu Siri - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
     <style>
-        :root {
-            --primary-color: #1e3a8a;
-            --secondary-color: #14b8a6;
-            --accent-color: #f97316;
-            --background-color: #f1f5f9;
-            --text-color: #1e293b;
-            --white-color: #ffffff;
-        }
-        
-        body {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
+        }
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
             scroll-behavior: smooth;
-            transition: background-color 0.3s, color 0.3s;
         }
 
+        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(90deg, #1f1f1f, #333333);
             padding: 20px 30px;
             position: fixed;
             width: 100%;
@@ -40,7 +35,7 @@
             backdrop-filter: blur(10px);
         }
         nav h1 {
-            color: var(--white-color);
+            color: #ffffff;
             font-size: 2rem;
             font-weight: 600;
         }
@@ -53,59 +48,62 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: var(--white-color);
+            color: #cccccc;
             font-size: 1.2rem;
             transition: 0.3s;
         }
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: #1e90ff;
         }
 
+        /* Hero Section */
         #hero {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(90deg, rgba(253, 249, 249, 0.7), rgba(255, 255, 255, 0.4)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+            background: linear-gradient(90deg, rgba(20, 20, 20, 0.7), rgba(30, 30, 30, 0.5)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
             position: relative;
         }
         .hero-content {
             max-width: 800px;
             margin: auto;
             padding: 60px;
-            background: rgba(20, 184, 166, 0.6);
+            background: rgba(40, 40, 40, 0.7);
             border-radius: 10px;
         }
         .hero-content h2 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: var(--white-color);
-            text-shadow: 2px 2px 10px #00000050;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px #000000;
         }
         .hero-content p {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--white-color);
+            color: #cccccc;
         }
         .cta-btn {
-            background: var(--secondary-color);
+            background: #1e90ff;
             padding: 15px 30px;
             font-size: 1.3rem;
-            color: var(--white-color);
+            color: #ffffff;
             border-radius: 5px;
             transition: 0.3s;
             cursor: pointer;
+            display: inline-block;
             text-decoration: none;
         }
         .cta-btn:hover {
-            background: var(--primary-color);
-            transform: scale(1.05);
+            background: #0077cc;
         }
 
+        /* Section Styles */
         section {
             padding: 120px 20px;
             text-align: center;
+            background-color: #181818;
         }
         .container {
             display: flex;
@@ -116,7 +114,7 @@
         }
         h2 {
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: #1e90ff;
             margin-top: 20px;
             font-weight: 600;
             text-align: center;
@@ -125,7 +123,7 @@
         p {
             font-size: 1.2rem;
             line-height: 1.6;
-            color: var(--text-color);
+            color: #cccccc;
             margin-top: 20px;
         }
         .image {
@@ -136,19 +134,27 @@
             max-width: 500px;
             flex: 1;
         }
-        .resume button {
-            background: var(--secondary-color);
+        .resume {
+            padding-left: 2px;
+            margin-left: 5px;
+            margin-bottom: 2px;
+        }
+        button {
+            background: #1e90ff;
             font-size: 1.3rem;
-            color: var(--white-color);
+            color: #ffffff;
             border-radius: 2px;
             transition: 0.3s;
             cursor: pointer;
-            border: none;
+            display: inline-flex;
+            text-decoration: none;
+            border-color: #fff;
         }
-        .resume button:hover {
-            background: var(--primary-color);
-            transform: scale(1.05);
+        button:hover {
+            background: #0077cc;
         }
+
+        /* Skills Section */
         .skills {
             display: flex;
             justify-content: space-between;
@@ -157,22 +163,17 @@
             margin-top: 20px;
         }
         .skills div {
-            background: var(--white-color);
+            background: #1e1e1e;
             padding: 20px;
             border-radius: 8px;
             width: 30%;
             min-width: 280px;
-            box-shadow: 0px 4px 10px rgba(30, 58, 138, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .skills div:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(30, 58, 138, 0.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
         .skills div h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: var(--primary-color);
+            color: #1e90ff;
         }
         .skills div ul {
             list-style-type: none;
@@ -181,9 +182,10 @@
         .skills div ul li {
             font-size: 1.1rem;
             margin: 5px 0;
-            color: var(--text-color);
+            color: #cccccc;
         }
 
+        /* Projects Section */
         .projects {
             display: flex;
             justify-content: space-between;
@@ -196,75 +198,52 @@
             margin-right: auto;
         }
         .projects div {
-            background: var(--white-color);
+            background: #1e1e1e;
             padding: 20px;
             border-radius: 8px;
             width: 48%;
             min-width: 280px;
-            box-shadow: 0px 4px 10px rgba(30, 58, 138, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             font-size: small;
             font-weight: 100;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .projects div:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(30, 58, 138, 0.2);
         }
         .projects img {
             max-width: 100%;
             border-radius: 8px;
+            border: 2px solid #444;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .projects img:hover {
             transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
         }
 
-        #contact form {
-            background: var(--white-color);
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 400px;
-            margin: auto;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        #contact form input, #contact form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        #contact form input:focus, #contact form textarea:focus {
-            border-color: var(--secondary-color);
-            outline: none;
-        }
-        #contact form button {
-            width: 100%;
-            background: var(--secondary-color);
-            color: var(--white-color);
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        #contact form button:hover {
-            background: var(--primary-color);
-        }
-
+        /* Footer */
         footer {
-            background-color: var(--primary-color);
+            background-color: #222222;
             text-align: center;
             padding: 20px;
-            color: var(--white-color);
         }
 
+        /* Contact */
+        .contact-numbers ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-numbers ul li {
+            color: #cccccc;
+            margin: 10px 0;
+        }
+        .contact-numbers ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+        .contact-numbers ul li a:hover {
+            color: #1e90ff;
+        }
+
+        /* Animations */
         .animated {
             opacity: 0;
             transform: translateY(20px);
@@ -275,35 +254,7 @@
             transform: translateY(0);
         }
 
-        /* Dark Mode */
-        body.dark-mode {
-            --background-color: #0f172a;
-            --text-color: #e2e8f0;
-            --primary-color: #334155;
-            --secondary-color: #3b82f6;
-            --accent-color: #f97316;
-            --white-color: #ffffff;
-        }
-
-        /* Back to Top Button */
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--secondary-color);
-            color: var(--white-color);
-            border: none;
-            border-radius: 50%;
-            padding: 12px 15px;
-            cursor: pointer;
-            display: none;
-            z-index: 999;
-            transition: background 0.3s ease;
-        }
-        #back-to-top:hover {
-            background: var(--primary-color);
-        }
-
+        /* Responsive */
         @media screen and (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -411,23 +362,21 @@
     <section id="about" class="container animated">
         <h2>About Me</h2>
         <div class="image">
-            <img src="https://github.com/Sirichunchu23/photos/blob/main/idcard.jpg?raw=true" style="width:100%;border-radius: 50%;" alt="Profile Picture">
+            <img src="https://github.com/Sirichunchu23/photos/blob/main/idcard.jpg?raw=true" style="width:100%;border-radius: 50%;">
         </div>
         <div class="desc">
-            <p>I’m a CSE undergraduate student with a solid background in data structures, and programming. I have completed
-                academic projects in web development, AI, and IoT that demonstrate my ability to create useful and creative solutions.
-                I am passionate about applying what I have learned in the classroom to real-world problems.</p>
+            <p>I’m a CSE undergraduate student with a solid background in data structures, and programming. I have completed academic projects in web development, AI, and IoT that demonstrate my ability to create useful and creative solutions. I am passionate about applying what I have learned in the classroom to real-world problems.</p>
             <div class="resume">
-                <button><a href="https://github.com/Sirichunchu23/Portfolio/blob/main/Resume%20(1).pdf" style="text-decoration: none; color: var(--white-color);">Resume</a></button>
+                <button><a href="https://github.com/Sirichunchu23/Portfolio/blob/main/Resume%20(1).pdf" style="text-decoration: none;color: #fff; border-style:hidden;">Resume</a></button>
             </div>
-        </div>
+        </div>   
     </section>
 
     <section id="skills" class="container animated">
         <h2>Skills</h2>
         <div class="skills">
             <div>
-                <h3>Languages <button onclick="toggleDetails('languages')" style="border: none;background-color: white; color: var(--text-color);"><i id="arrow-icon-languages" class="fa fa-chevron-down"></i></button></h3>
+                <h3>Languages <button onclick="toggleDetails('languages')" style="border: none;background-color: #181818; color: #cccccc;"><i id="arrow-icon-languages" class="fa fa-chevron-down"></i></button></h3>
                 <div id="languages" style="display: none;">
                     <ul>
                         <li>Java</li>
@@ -437,8 +386,9 @@
                     </ul>
                 </div>
             </div>
+
             <div>
-                <h3>Product Design <button onclick="toggleDetails('product-design')" style="border: none;background-color: white;color: var(--text-color);"><i id="arrow-icon-product-design" class="fa fa-chevron-down"></i></button></h3>
+                <h3>Product Design <button onclick="toggleDetails('product-design')" style="border: none;background-color: #181818;color: #cccccc;"><i id="arrow-icon-product-design" class="fa fa-chevron-down"></i></button></h3>
                 <div id="product-design" style="display: none;">
                     <ul>
                         <li>UX/UI</li>
@@ -446,8 +396,9 @@
                     </ul>
                 </div>
             </div>
+
             <div>
-                <h3>Soft Skills <button onclick="toggleDetails('soft-skills')" style="border: none;background-color: white;color: var(--text-color);"><i id="arrow-icon-soft-skills" class="fa fa-chevron-down"></i></button></h3>
+                <h3>Soft Skills <button onclick="toggleDetails('soft-skills')" style="border: none;background-color: #181818;color: #cccccc;"><i id="arrow-icon-soft-skills" class="fa fa-chevron-down"></i></button></h3>
                 <div id="soft-skills" style="display: none;">
                     <ul>
                         <li>Communication Skills</li>
@@ -465,99 +416,68 @@
         <div class="projects">
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175942.png?raw=true" alt="College Information System">
-                <p>The College Management System is a web application designed to streamline student access to essential information.The application was developed using HTML, CSS, and JavaScript basics, representing a complete front-end development.</p>
-                <button><a href="https://sirichunchu23.github.io/HCI_05_College_Information_System/" style="text-decoration: none; color: var(--white-color);">Website</a></button>
+                <p>The College Management System is a web application designed to streamline student access to essential information. The application was developed using HTML, CSS, and JavaScript basics, representing a complete front-end development.</p><br>
+                <button><a href="https://sirichunchu23.github.io/HCI_05_College_Information_System/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
             </div>
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-03-15%20175656.png?raw=true" alt="Portfolio">
-                <p>This portfolio design is a modern and responsive personal website. It serves as an online representation of the user's skills, projects, and contact information using HTML, CSS and some basics of JavaScript.</p>
-                <button><a href="https://sirichunchu23.github.io/Portfolio/" style="text-decoration: none; color: var(--white-color);">Website</a></button>
+                <p>This portfolio design is a modern and responsive personal website. It serves as an online representation of the user's skills, projects, and contact information using HTML, CSS and some basics of JavaScript.</p><br>
+                <button><a href="https://sirichunchu23.github.io/Portfolio/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
             </div>
             <div>
                 <img src="https://github.com/Sirichunchu23/photos/blob/main/Screenshot%202025-08-19%20183931.png?raw=true" alt="Analysis">
-                <p>The project successfully shows that follower count can predict an influencer’s potential reach using regression, while clustering helps group influencers with similar traits. These insights can guide brands and marketers in selecting the right influencers for campaigns.</p>
-                <button><a href="https://sirichunchu23.github.io/Hybrid-Social-Media-Analysis/" style="text-decoration: none; color: var(--white-color);">Website</a></button>
+                <p>The project successfully shows that follower count can predict an influencer’s potential reach using regression, while clustering helps group influencers with similar traits. These insights can guide brands and marketers in selecting the right influencers for campaigns.</p><br>
+                <button><a href="https://sirichunchu23.github.io/Hybrid-Social-Media-Analysis/" style="text-decoration: none;color: #fff; border-style:hidden;">website</a></button>
             </div>
         </div>
     </section>
 
     <section id="contact" class="container animated">
         <h2>Contact</h2>
-        <form action="mailto:sirichunchu123@gmail.com" method="POST" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p>Email: sirichunchu123@gmail.com</p>
+        <div class="contact-numbers" id="contact-numbers">
+            <ul>
+                <li>📞 <a href="tel:+919550544380">+91 9550544380</a></li>
+                <li>✉ <a href="mailto:sirichunchu123@gmail.com">sirichunchu123@gmail.com</a></li>
+                <li>📍 Ambedkar Nagar, Jangaon</li>
+                <li>
+                    <a href="https://wa.me/qr/ZHZNX5EVAYD7K1"><img src="https://github.com/Sirichunchu23/photos/blob/main/whatsapp.jpg?raw=true" style="width:5%;height:5%;"></a>
+                    <a href="https://www.linkedin.com/in/siri-chunchu-246518292/"><img src="https://github.com/Sirichunchu23/photos/blob/main/linkedin.jpg?raw=true" style="width:5%;height:5%;padding-left:10px;padding-bottom:4px;"></a>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Chunchu Siri. All rights reserved.</p>
+        <p>&copy; 2025 Chunchu Siri. All Rights Reserved.</p>
     </footer>
 
-    <!-- Dark Mode Toggle -->
-    <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; left: 20px; background: var(--secondary-color); color: var(--white-color); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">
-        <i id="dark-mode-icon" class="fa fa-moon"></i>
-    </button>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
-
     <script>
-        // Toggle Skills Details
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".animated");
+            const options = { root: null, threshold: 0.2 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            sections.forEach(section => observer.observe(section));
+        });
+
         function toggleDetails(skillId) {
             const details = document.getElementById(skillId);
             const icon = document.getElementById('arrow-icon-' + skillId);
-            const button = icon.parentElement;
-
-            const isExpanded = details.style.display === "block";
-            details.style.display = isExpanded ? "none" : "block";
-            icon.classList.toggle('fa-chevron-down', isExpanded);
-            icon.classList.toggle('fa-chevron-up', !isExpanded);
-            button.setAttribute('aria-expanded', !isExpanded);
-        }
-
-        // Intersection Observer for animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.animated').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            const icon = document.getElementById("dark-mode-icon");
-            if (document.body.classList.contains("dark-mode")) {
-                icon.classList.remove("fa-moon");
-                icon.classList.add("fa-sun");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block"; 
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
             } else {
-                icon.classList.remove("fa-sun");
-                icon.classList.add("fa-moon");
+                details.style.display = "none"; 
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
             }
-        }
-
-        // Back to Top Button
-        const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.style.display = "block";
-            } else {
-                backToTop.style.display = "none";
-            }
-        });
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
