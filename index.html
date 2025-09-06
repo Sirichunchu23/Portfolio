@@ -6,7 +6,6 @@
     <title>Chunchu Siri - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-
     <style>
         * {
             margin: 0;
@@ -19,6 +18,36 @@
             color: #e0e0e0;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            position: relative;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .background-animation .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(30, 144, 255, 0.1);
+            animation: float 20s linear infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            50% {
+                transform: translateY(-100px) translateX(50px) scale(1.2);
+            }
+            100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
         }
 
         /* Navigation Bar */
@@ -35,7 +64,7 @@
             backdrop-filter: blur(10px);
         }
         nav h1 {
-            color: #ffffff;
+            color: white;
             font-size: 2rem;
             font-weight: 600;
         }
@@ -169,6 +198,7 @@
             width: 30%;
             min-width: 280px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            color: #e0e0e0;
         }
         .skills div h3 {
             font-size: 1.5rem;
@@ -207,6 +237,7 @@
             font-size: small;
             font-weight: 100;
             text-align: center;
+            color: #e0e0e0;
         }
         .projects img {
             max-width: 100%;
@@ -219,28 +250,31 @@
             box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
         }
 
+        /* Contact Section */
+        .contact-numbers ul {
+            list-style-type: none;
+        }
+        .contact-numbers ul li {
+            margin: 10px 0;
+            color: #cccccc;
+        }
+        .contact-numbers ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: 0.3s;
+        }
+        .contact-numbers ul li a:hover {
+            color: #1e90ff;
+        }
+
         /* Footer */
         footer {
             background-color: #222222;
             text-align: center;
             padding: 20px;
         }
-
-        /* Contact */
-        .contact-numbers ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact-numbers ul li {
+        footer p {
             color: #cccccc;
-            margin: 10px 0;
-        }
-        .contact-numbers ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-        }
-        .contact-numbers ul li a:hover {
-            color: #1e90ff;
         }
 
         /* Animations */
@@ -254,7 +288,7 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        /* Responsive Media Queries */
         @media screen and (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -340,6 +374,17 @@
     </style>
 </head>
 <body>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="circle" style="width: 200px; height: 200px; top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 50%; left: 70%; animation-delay: 5s;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 80%; left: 40%; animation-delay: 10s;"></div>
+        <div class="circle" style="width: 180px; height: 180px; top: 30%; left: 80%; animation-delay: 3s;"></div>
+        <div class="circle" style="width: 120px; height: 120px; top: 60%; left: 10%; animation-delay: 7s;"></div>
+    </div>
+
+    <!-- Navigation Bar -->
     <nav>
         <h1>Chunchu Siri</h1>
         <ul class="nav-links">
@@ -351,6 +396,7 @@
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <h2>Hi, I'm Chunchu Siri</h2>
@@ -359,6 +405,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="container animated">
         <h2>About Me</h2>
         <div class="image">
@@ -372,6 +419,7 @@
         </div>   
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="container animated">
         <h2>Skills</h2>
         <div class="skills">
@@ -411,6 +459,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="container animated">
         <h2>Projects</h2>
         <div class="projects">
@@ -432,6 +481,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="container animated">
         <h2>Contact</h2>
         <div class="contact-numbers" id="contact-numbers">
@@ -447,6 +497,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Chunchu Siri. All Rights Reserved.</p>
     </footer>
@@ -480,5 +531,6 @@
             }
         }
     </script>
+
 </body>
 </html>
